@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     BACKGROUND HEARTS
+========================================= -->
+
+<div class="hearts-background"></div>
+
+
+<!-- =========================================
+     FIRST SCREEN
+========================================= -->
+
+<div class="container" id="welcomeScreen">
+
+    <div class="heart">
+        ❤️
+    </div>
+
+    <h1>
+        Hey You! 💕
+    </h1>
+
+    <p>
+        I have a little surprise waiting for you...
+    </p>
+
+    <button onclick="startSurprise()">
+        🎁 TAP HERE
+    </button>
+
+</div>
+
+
+<!-- =========================================
+     COUNTDOWN SCREEN
+========================================= -->
+
+<div class="container hidden" id="countdownScreen">
+
+    <div class="big-heart">
+        💗
+    </div>
+
+    <h1>
+        Wait... 👀
+    </h1>
+
+    <p>
+        Something special is coming...
+    </p>
+
+    <div id="countdown">
+        3
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     BIRTHDAY SCREEN
+========================================= -->
+
+<div class="container hidden" id="birthdayScreen">
+
+    <div class="celebration">
+        🎉🎂🎉
+    </div>
+
+    <h1 class="birthday-title">
+        HAPPY BIRTHDAY! ❤️
+    </h1>
+
+    <p class="birthday-text">
+        Today is your special day! 🥳💖
+    </p>
+
+    <button onclick="nextSurprise()">
+        💌 TAP FOR YOUR SURPRISE
+    </button>
+
+</div>
+
+
+<!-- =========================================
+     SPECIAL PHOTO SCREEN
+========================================= -->
+
+<div class="container hidden" id="photoScreen">
+
+    <h2 class="photo-heading">
+        A Special Photo For You ❤️
+    </h2>
+
+    <div class="photo-frame">
+
+        <img
+            src="images/boyfriend.jpg"
+            alt="Special Photo"
+        >
+
+    </div>
+
+    <h1 class="photo-title">
+        Happy Birthday, My Special Person ❤️
+    </h1>
+
+    <p class="photo-message">
+        Here's a little something to make your day
+        even more special. ✨
+    </p>
+
+    <button onclick="showMessage()">
+        💌 OPEN MY MESSAGE
+    </button>
+
+</div>
+
+
+<!-- =========================================
+     PERSONAL MESSAGE SCREEN
+========================================= -->
+
+<div class="container hidden" id="messageScreen">
+
+    <div class="message-heart">
+        💌
+    </div>
+
+    <h1 class="message-title">
+        A Little Message For You ❤️
+    </h1>
+
+    <div class="letter">
+
+        <p id="typedMessage"></p>
+
+    </div>
+
+    <button onclick="showMemories()">
+        📸 SEE SOMETHING SPECIAL
+    </button>
+
+</div>
+
+
+<!-- =========================================
+     FIVE PHOTO SCREEN
+========================================= -->
+
+<div class="container hidden" id="memoriesScreen">
+
+    <div class="memory-heart">
+        💕
+    </div>
+
+    <h1 class="memory-title">
+        Little Things That Remind Me of You ❤️
+    </h1>
+
+    <p class="memory-subtitle">
+        It's the little things that make you special... ✨
+    </p>
+
+
+    <div class="memory-card">
+
+        <img
+            id="memoryImage"
+            src="images/memory1.jpg"
+            alt="Special Photo"
+        >
+
+        <div class="memory-caption">
+
+            <h2 id="memoryCaption">
+                It's the little things that make you special. ❤️
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="memory-counter">
+
+        <span id="memoryNumber">
+            1
+        </span>
+
+        / 5
+
+    </div>
+
+
+    <button onclick="nextMemory()">
+        💕 NEXT
+    </button>
+
+</div>
+
+
+<!-- =========================================
+     FINAL SURPRISE SCREEN
+========================================= -->
+
+<div class="container hidden" id="finalScreen">
+
+    <div class="final-hearts">
+        💕 ✨ 💖 ✨ 💕
+    </div>
+
+    <h1 class="final-title">
+        One Last Surprise! 🎁
+    </h1>
+
+    <p class="final-text">
+        You made it all the way here... ❤️
+    </p>
+
+
+    <!-- GIFT -->
+
+    <div
+        class="gift-box"
+        onclick="openGift()"
+    >
+        🎁
+    </div>
+
+    <p class="gift-hint">
+        👆 Tap the gift
+    </p>
+
+
+    <!-- FINAL MESSAGE -->
+
+    <div id="finalMessage" class="hidden">
+
+        <div class="final-celebration">
+            🎉 🎂 🎉
+        </div>
+
+        <h1 class="surprise-text">
+            HAPPY BIRTHDAY! ❤️
+        </h1>
+
+
+        <div class="final-letter">
+
+            <p>
+                I hope this little surprise brought
+                a smile to your face. 🥹❤️
+            </p>
+
+            <p>
+                May this new year of your life bring
+                you lots of happiness, success,
+                laughter and beautiful moments. ✨
+            </p>
+
+            <p>
+                Keep smiling, keep shining and
+                always be the amazing person you are. 💕
+            </p>
+
+            <p class="final-ending">
+                Have the happiest birthday! 🎂❤️
+            </p>
+
+        </div>
+
+
+        <div class="big-hearts">
+            ❤️ 💕 💖 💗 ❤️
+        </div>
+
+
+        <button onclick="restartSurprise()">
+            🔄 SEE IT AGAIN
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
