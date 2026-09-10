@@ -13,6 +13,7 @@ function startSurprise() {
     const countdown =
         document.getElementById("countdown");
 
+
     const timer = setInterval(function () {
 
         count--;
@@ -60,13 +61,14 @@ function showMessage() {
 
 
     const message =
-        "Happy Birthday Mahhhiiiiiiii! ❤️ I hope your day is filled with happiness, laughter and beautiful moments. You deserve all the wonderful things in the world. Keep smiling and enjoy your special day! 🎂✨";
+        "Happy Birthday! ❤️ I hope your day is filled with happiness, laughter and beautiful moments. You deserve all the wonderful things in the world. Keep smiling and enjoy your special day! 🎂✨";
 
 
     let i = 0;
 
     const text =
         document.getElementById("typedMessage");
+
 
     text.innerHTML = "";
 
@@ -84,6 +86,7 @@ function showMessage() {
         }
 
     }
+
 
     typeWriter();
 
@@ -135,8 +138,10 @@ function nextMemory() {
         const image =
             document.getElementById("memoryImage");
 
+
         const number =
             document.getElementById("memoryNumber");
+
 
         const caption =
             document.getElementById("memoryCaption");
@@ -148,7 +153,7 @@ function nextMemory() {
         setTimeout(function () {
 
             image.src =
-                "images/memory" +
+                "memory" +
                 currentMemory +
                 ".jpg";
 
@@ -183,12 +188,15 @@ function nextMemory() {
 
 function openGift() {
 
-    const gift = document.querySelector(".gift-box");
+    const gift =
+        document.querySelector(".gift-box");
 
-    // Change gift into celebration
+
     gift.innerHTML = "🎉";
 
+
     gift.classList.add("gift-open");
+
 
     setTimeout(function () {
 
@@ -196,10 +204,13 @@ function openGift() {
             .getElementById("finalMessage")
             .classList.remove("hidden");
 
+
         createHearts();
 
     }, 600);
+
 }
+
 
 /* =================================
    FLOATING HEARTS
@@ -239,5 +250,16 @@ function createHearts() {
         }, 4000);
 
     }
+
+}
+
+
+/* =================================
+   REPLAY SURPRISE
+================================= */
+
+function restartSurprise() {
+
+    location.reload();
 
 }
