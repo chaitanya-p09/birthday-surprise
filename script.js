@@ -8,6 +8,7 @@ function startSurprise() {
 
     document.getElementById("countdownScreen").style.display = "block";
 
+
     let count = 3;
 
     const countdown =
@@ -18,13 +19,17 @@ function startSurprise() {
 
         count--;
 
+
         if (count > 0) {
 
             countdown.innerText = count;
 
-        } else {
+        }
+
+        else {
 
             clearInterval(timer);
+
 
             document.getElementById("countdownScreen").style.display = "none";
 
@@ -33,7 +38,9 @@ function startSurprise() {
         }
 
     }, 1000);
+
 }
+
 
 
 /* =================================
@@ -47,6 +54,7 @@ function nextSurprise() {
     document.getElementById("photoScreen").style.display = "block";
 
 }
+
 
 
 /* =================================
@@ -65,6 +73,7 @@ function showMessage() {
 
 
     let i = 0;
+
 
     const text =
         document.getElementById("typedMessage");
@@ -93,8 +102,9 @@ function showMessage() {
 }
 
 
+
 /* =================================
-   MESSAGE → FIVE PHOTOS
+   MESSAGE → MEMORIES
 ================================= */
 
 function showMemories() {
@@ -104,6 +114,7 @@ function showMemories() {
     document.getElementById("memoriesScreen").style.display = "block";
 
 }
+
 
 
 /* =================================
@@ -128,12 +139,14 @@ const memoryCaptions = [
 ];
 
 
+
 function nextMemory() {
 
     currentMemory++;
 
 
     if (currentMemory <= 5) {
+
 
         const image =
             document.getElementById("memoryImage");
@@ -147,13 +160,20 @@ function nextMemory() {
             document.getElementById("memoryCaption");
 
 
+        /* Fade out */
+
         image.style.opacity = "0";
 
 
         setTimeout(function () {
 
+
+            /* IMPORTANT:
+               Images are directly in GitHub root
+            */
+
             image.src =
-                "memory" +
+                "./memory" +
                 currentMemory +
                 ".jpg";
 
@@ -166,12 +186,18 @@ function nextMemory() {
                 memoryCaptions[currentMemory - 1];
 
 
+            /* Fade in */
+
             image.style.opacity = "1";
+
 
         }, 250);
 
 
-    } else {
+    }
+
+    else {
+
 
         document.getElementById("memoriesScreen").style.display = "none";
 
@@ -180,6 +206,7 @@ function nextMemory() {
     }
 
 }
+
 
 
 /* =================================
@@ -200,6 +227,7 @@ function openGift() {
 
     setTimeout(function () {
 
+
         document
             .getElementById("finalMessage")
             .classList.remove("hidden");
@@ -207,9 +235,11 @@ function openGift() {
 
         createHearts();
 
+
     }, 600);
 
 }
+
 
 
 /* =================================
@@ -219,6 +249,7 @@ function openGift() {
 function createHearts() {
 
     for (let i = 0; i < 25; i++) {
+
 
         const heart =
             document.createElement("div");
@@ -252,6 +283,7 @@ function createHearts() {
     }
 
 }
+
 
 
 /* =================================
