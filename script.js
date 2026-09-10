@@ -69,7 +69,7 @@ function showMessage() {
 
 
     const message =
-        "Happy Birthday! ❤️ I hope your day is filled with happiness, laughter and beautiful moments. You deserve all the wonderful things in the world. Keep smiling and enjoy your special day! 🎂✨";
+        "Happy Birthday Mahhhiiiiii! ❤️ I hope your day is filled with happiness, laughter and beautiful moments. You deserve all the wonderful things in the world. Keep smiling and enjoy your special day! 🎂✨";
 
 
     let i = 0;
